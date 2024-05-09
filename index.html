@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Sign-up form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="javascript.js" defer></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="background">
+        <img src="images/background.jpg" alt="background" />
+      </div>
+      <div class="credit">
+        Photo by <a href="https://unsplash.com/@brandonrussell?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Brandon Russell</a> on <a href="https://unsplash.com/photos/grayscale-photo-of-classic-car-kstT_He9MFI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      </div>
+    </div>
+    <div class="main">
+      <div class="join">
+        <div class="content">
+          <p>
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams. Sign up
+            now to get started.
+          </p>
+        </div>
+        <div class="signup">
+          <h1 class="title">Join our community</h1>
+          <form>
+            <div class="name">
+              <label for="fullname">Full Name</label>
+              <input
+                type="text"
+                name="full_name"
+                id="fullname"
+                minlength="3"
+                required
+              />
+              <span></span>
+            </div>
+            <div class="phone">
+              <label for="telephone">Phone Number</label>
+              <input
+                type="tel"
+                name="phone_number"
+                id="telephone"
+                minlength="10"
+                maxlength="14"
+                required
+              />
+              <span></span>
+            </div>
+            <div class="email">
+              <label for="e-mail">Email</label>
+              <input type="email" name="e_mail" id="e-mail" required />
+              <span></span>
+            </div>
+            <div class="pass">
+              <label for="pwd">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="pwd"
+                minlength="8"
+                maxlength="32"
+                required
+              />
+              <span></span>
+            </div>
+            <div class="confirm">
+              <label for="confirm">Confirm Password</label>
+              <input
+                type="password"
+                name="confirm_password"
+                id="confirm"
+                minlength="8"
+                maxlength="32"
+                required
+              />
+              <span></span>
+            </div>
+            <div class="submit">
+              <button type="submit">Create Account</button>
+            </div>
+            <div class="switch">
+              Already have an account? <a href="#">Log in</a>
+            </div>
+          </form>
+        </div>
+        <div class="signup login d-n">
+          <h1 class="title">Log in to your account</h1>
+          <form action="" method="post">
+            <div class="email">
+              <label for="email">Email</label>
+              <input type="email" name="e_mail" id="email" required />
+              <span></span>
+            </div>
+            <div class="pass">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                minlength="8"
+                maxlength="32"
+                required
+              />
+              <span></span>
+            </div>
+            <div class="submit">
+              <button type="submit">Sign in</button>
+            </div>
+            <div class="switch">
+              New to this website? <a href="#">Create an account</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

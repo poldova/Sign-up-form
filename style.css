@@ -1,0 +1,216 @@
+:root {
+    --px-3: 3px;
+    --px-10: 10px;
+    --rem-1: 1rem;
+    --width-80: 80%;
+    --margin-auto: 10px auto;
+    --font-sp: "lobster_twoitalic";
+    --fff: rgb(255, 255, 255);
+    --white: rgb(255, 255, 255);
+    --black: rgb(0, 0, 0);
+    --red: rgb(200, 0, 0);
+    --bg: rgb(243, 244, 246);
+    --blue: rgb(30, 64, 174);
+    --thin: rgb(100 100 100/0.2);
+    --shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  }
+  
+  @font-face {
+    font-family: "lobster_twoitalic";
+    src:
+      url("fonts/lobstertwo-italic-webfont.woff2") format("woff2"),
+      url("fonts/lobstertwo-italic-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      "Open Sans",
+      "Helvetica Neue",
+      sans-serif;
+    background: var(--bg);
+    color: var(--black);
+    font-size: 0.75rem;
+    width: 80%;
+    max-width: 1200px;
+  }
+  
+  .main {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: calc(var(--px-10) * 2);
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+  }
+  
+  .sidebar {
+    display: flex;
+    flex: 1 200px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+  .background {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: rgb(18, 18, 18);
+  }
+  .background img {
+    width: 100%;
+  }
+  
+  .credit {
+    position: absolute;
+    bottom: var(--px-10);
+    right: var(--px-10);
+    font-size: 12px;
+    font-family: var(--font-sp);
+  }
+  .credit a,
+  .credit {
+    color: var(--white);
+  }
+  .credit a:hover {
+    text-decoration: underline;
+  }
+  
+  input,
+  button {
+    appearance: none;
+    outline: 0;
+  }
+  
+  .join {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: calc(var(--px-10) * 2);
+    width: 100%;
+  }
+  
+  .title {
+    font-size: var(--rem-1);
+  }
+  
+  .content {
+    display: flex;
+    width: var(--width-80);
+    margin: var(--margin-auto);
+    font-family: cursive, sans-serif;
+  }
+  
+  .join .signup {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--px-10) * 2);
+    flex: 5;
+    width: var(--width-80);
+    margin: var(--margin-auto);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--px-10);
+  }
+  
+  form div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .signup button {
+    border: 0;
+    outline: 0;
+    color: var(--fff);
+    background: var(--blue);
+    padding: var(--px-10) 25px;
+    cursor: pointer;
+    border-radius: var(--px-3);
+    font-size: var(--rem-1);
+    margin-right: auto;
+  }
+  label,
+  button {
+    user-select: none;
+  }
+  
+  .signup input[type] {
+    border: 1px solid var(--thin);
+    padding: var(--px-10);
+    border-radius: var(--px-3);
+    background: inherit;
+  }
+  
+  .signup span::before,
+  .signup span {
+    color: var(--red);
+  }
+  
+  .signup input[type="text"]:focus:invalid + span::before {
+    content: "⚠️ This name is not valid";
+  }
+  
+  .signup input[type="tel"]:focus:invalid + span::before {
+    content: "⚠️ This number is not valid";
+  }
+  
+  .signup input[type="email"]:focus:invalid + span::before {
+    content: "⚠️ This email is not valid";
+  }
+  
+  .signup input[type="password"]:focus:invalid + span::before {
+    content: "⚠️This password is not valid (at least 8)";
+  }
+  
+  .signup input[name="confirm_password"]:focus:invalid + span::before {
+    content: "⚠️ Confirm password is required";
+  }
+  
+  .signup input[type]:focus:invalid {
+    border-color: var(--red);
+  }
+  
+  .switch {
+    flex-direction: row;
+    margin-top: var(--px-10);
+  }
+  
+  .d-n {
+    display: none !important;
+  }
+  
+  @media screen and (min-width: 900px) {
+    body {
+      width: 40%;
+    }
+  }  
